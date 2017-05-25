@@ -1,8 +1,0 @@
-header
-{
-    background-image: url("../img/menu.png");
-    background-attachment: fixed; /* Le fond restera fixe */
-    background-repeat: no-repeat; /* Le fond ne sera pas répété */
-    background-position: top right; /* Le fond sera placé en haut à droite */
-    text-align: center;
-}

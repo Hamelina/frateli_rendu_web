@@ -6,16 +6,6 @@
     class AcademieController extends globalController{
         private $academieRequester;
 
-        //
-        public function getEventOfAcademie($idAcademie)
-        {
-            $this->academieRequester =new Academie();
-            $this->academieRequester->Init();
-            $response = $this->academieRequester->select($idAcademie);
-            //var_dump($response);
-            //return $idAcademie;
-
-        }
 
         //gestion   du menu déroulant contenant la liste des académies en base
         public function initPageAcademie(){
@@ -81,6 +71,7 @@
             }
         }
     }
+    /*controles des varibales passés en poste*/
     globalController::logout();
     globalController::login();
     globalController::addUser();

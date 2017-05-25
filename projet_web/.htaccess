@@ -1,0 +1,8 @@
+
+
+RewriteEngine On
+RewriteRule    ^index  view/index.php
+RewriteRule    ^accueil  view/index.php
+
+RewriteRule    ^evenements  view/evenements.php
+RewriteRule    ^contact  view/contact.php

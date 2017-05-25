@@ -14,6 +14,7 @@ class Filleul extends Model
  	protected static $table = 'filleul';
  	protected static $primary = 'id_filleul';
 
+	/*GETTERS */
  	public function getNom()
  	{
  		return $this->nom_filleul;
@@ -29,6 +30,7 @@ class Filleul extends Model
  		return $this->adr_mail_filleul;
  	}
 
+	//vérifie si un utilisateur existe en base en comparant le mot de passe renseigné avec celui stocké en base crypté
 	public function checkUserAccount($login,$password){
 		try
 		{
@@ -41,7 +43,7 @@ class Filleul extends Model
 
 			if($req_prep->rowCount()>0){
 				$rslt = $req_prep->fetch();
-				$check = password_verify($password,$rslt["motdepasse"]);
+				$check = password_verify($password,$rslt["motdepasse"]); //decryptage et vérification du mot de passe
 				if($check){
 					return $rslt;
 				}
@@ -68,9 +70,10 @@ class Filleul extends Model
 	    }
 	}
 
+	//ajout d'un utlisateur(filleul) en base de donnée
 	function insertUser(){
 		$success = false;
-		$cryptedPwd = password_hash($this->pwd,PASSWORD_DEFAULT);
+		$cryptedPwd = password_hash($this->pwd,PASSWORD_DEFAULT);//cryptage du mot de passe
 		$param =array(
 			"id_filleul" => NULL,
 			"nom_filleul" => $this->nom_filleul,

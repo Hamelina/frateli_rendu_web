@@ -1,5 +1,5 @@
 <?php
-    require_once("../model/modelFilleul.php");
+    require_once("../model/modelFilleul.php");//model qui gère les différentes opérations en base de données
     class globalController{
         private $filleul;
         protected $page;
@@ -12,14 +12,15 @@
 
         }
 
+        //affichage de la vue du menu
         function loadMenu(){
             echo '<div id="logo">'.
-                    '<img src="img/logo.jpg" alt="Logo de Frateli" />'.
+                    '<img src="view/img/logo.jpg" alt="Logo de Frateli" />'.
                 '</div>'.
                 '<ul class="nav nav-tabs">'.
-                    '<li><a href="index.php">Académie</a></li>'.
-                    '<li><a href="evenements.php">Evènements</a></li>'.
-                    '<li><a href="contact.php">Contact</a> </li>';
+                    '<li><a href="accueil">Accueil</a></li>'.
+                    '<li><a href="evenements">Evènements</a></li>'.
+                    '<li><a href="contact">Contact</a> </li>';
             echo '</ul>';
             if(isset($_COOKIE["connected"]) && $_COOKIE["connected"] === "true"){
                 echo '<div class="infoUserContainer">
@@ -31,13 +32,6 @@
             else{
 
                 echo    '<div class="formLogin" ><button class="btn btn-lg btn-primary btn-block btnLogin" data-toggle="modal" data-target="#myModalAddUSer">s\'inscrire comme filleul</button></div>';
-                        /*'<form class="formLogin" action="'.$this->page.'" method="POST">'.
-                                '<div class="form-group">
-                                    <input class="form-control inputLogin" type="email" placeholder="adresse mail"  name="login" required>
-                                    <input class="form-control inputLogin" type="password" placeholder="mot de passe"  name="pwd" required>
-                                    <button class="btn btn-lg btn-primary btn-block btnLogin" type="submit">se connecter</button>
-                                </div>
-                         </form>';*/
             }
 
         }
@@ -55,6 +49,8 @@
             echo '</select>';
         }
 
+
+        //ajout d'un utilisateur
         public static function addUser(){
             if(isset($_POST["nomUser"]) && isset($_POST["prenomUser"]) && isset($_POST["pwdUser"]) && isset($_POST["emailUser"])){
                 $filleul = new Filleul($_POST["nomUser"],$_POST["prenomUser"],$_POST["pwdUser"],$_POST["emailUser"]  );
@@ -75,6 +71,7 @@
             }
         }
 
+        //gestion de la connexion utilisateur
         public static function login(){
 
             if(isset($_POST["login"]) && isset($_POST["pwd"])){
@@ -109,10 +106,7 @@
             };
         }
 
-        public static function postCommentaire(){
-
-        }
-
+        //deconnexion
         public static function logout(){
             if(isset($_POST["logout"]) && $_POST["logout"] !== ""){
                 if($_POST["logout"] === "yes") {

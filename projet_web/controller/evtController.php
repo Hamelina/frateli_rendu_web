@@ -61,7 +61,7 @@
                 && isset($_POST["academySelection"]) && $_POST["academySelection"] !==  ""
                 && isset($_POST["dateEvt"]) && $_POST["dateEvt"] !==  ""
             ){
-                $date = new DateTime($_POST["dateEvt"]);
+                $date = new DateTime($_POST["dateEvt"]);//formatage de la date pour être insérer en base
                 $filleul = new Filleul();
                 $filleul->Init();
                 $mailExist =$filleul->mailExist($_POST["emailFilleul"]);
@@ -99,6 +99,7 @@
         }
 
     }
+    //fonction static de gestion des variables passés en poste
     globalController::logout();
     evtController::addEvt();
     globalController::addUser();

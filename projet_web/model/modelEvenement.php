@@ -16,6 +16,7 @@ class Evenement extends Model
 	protected static $table = 'evenement';
  	protected static $primary = 'id_evenement';
 
+	/**GETTERS**/
 	public function getIntituleEvent()
  	{
  		return $this->intitule_evenement;
@@ -90,6 +91,7 @@ class Evenement extends Model
 		}
 	}
 
+	//récupèration de tout les évènements de tout les académies
 	public function getAllEventJoinAcademy(){
 		$sql = "SELECT * from ".static::$table." INNER JOIN academie ON ".static::$table.".id_academie = academie.id_academie  ORDER BY ".static::$table.".date_event";
 		try
