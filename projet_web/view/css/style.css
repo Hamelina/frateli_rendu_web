@@ -1,0 +1,124 @@
+#bloc_page
+{
+    width:1200px;
+    margin: auto;
+}
+
+header{
+    /*display: flex;
+    justify-content: space-between;;
+    align-items: flex-end;*/
+}
+
+.mainContent{
+    margin:10px 0px 0px 0px;
+}
+
+#titre_principal
+{
+    /*display:flex;
+    flex-direction: column;*/
+}
+
+#logo
+{
+    display:inline-block;
+    vertical-align: top;
+    /*display: flex;
+    flex-direction: row;
+    align-items: baseline;;*/
+}
+
+/*menu de navigation*/
+#menuContainer ul  {
+     display:inline-block;
+
+ }
+
+#menuContainer ul > li a {
+    text-decoration:none;
+    color:black;
+}
+
+
+
+
+#logo img
+{
+    width: 40px;
+    height: 40px;
+}
+
+.submitButtonForm{
+    margin:7px 0 7px 0;
+}
+
+.inputLogin{
+    width:auto;
+    display:inline-block;
+}
+
+.inputForm{
+    width:auto;
+}
+
+.formLogin{
+    display:inline-block;
+    vertical-align: top;
+    margin:7px auto;
+    float:right;
+}
+.btnLogin{
+    width:auto;
+    padding: 3px;
+    font-size: 15px;
+    vertical-align: top;
+    margin-top: 0px;
+    height: 34px;
+    text-align: center;
+    display:inline-block;
+}
+
+.dropdownList{
+    width:auto;
+    display:inline-block;
+    vertical-align:top;
+}
+
+.dropdownListContainer button{
+    display:inline-block;
+    vertical-align:top;
+}
+
+.containerDesc{
+    display:block;
+}
+
+.containerDate{
+    float:right;
+    display:block;
+}
+
+.infoUserContainer{
+    display:inline-block;
+    vertical-align: top;
+    margin:15px 9px auto;
+    float:right;
+}
+
+.infoUser{
+    display:inline-block;
+}
+.formDeconnexion{
+    display:inline-block;
+}
+
+.btn-deconnect{
+    padding: 4px;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+
+
+

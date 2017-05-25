@@ -1,0 +1,184 @@
+@media screen and (max-width: 1280px)
+{
+    /* Rédigez vos propriétés CSS ici */
+}
+
+*
+{
+	font-family: 'Comic Sans MS', sans-sherif;
+}
+
+#bloc_page
+{
+	width: 900px;
+	margin: auto;
+}
+/*@media all and (max-width: 1024px)
+{
+    #bloc_page
+    {
+        width: auto;
+    }
+}
+@media all and (max-width: 1024px)
+{
+    nav
+    {
+        width: auto;
+        text-align: left;
+    }
+    
+    nav ul
+    {
+        flex-direction: column;
+    }
+
+    nav li
+    {
+        padding-left: 4px;
+    }
+    
+    nav a
+    {
+        font-size: 1.1em;
+    }
+    
+    nav a:hover
+    {
+        border-bottom: 0;
+    }
+}*/
+
+header{
+	display: flex;
+	justify-content: space-between;;
+	align-items: flex-end;
+}
+
+#titre_principal
+{
+	display:flex;
+	flex-direction: column;
+}
+
+#logo
+{
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;;
+}
+#logo img
+{
+	width: 59px;
+	height: 60px;
+}
+
+header h1
+{
+	font-size: 2.5em;
+	font-weight: normal;
+	margin: 0 0 0 10px;
+}
+
+header h2
+{
+	font-size: 1.1em;
+	margin-top: 0px;
+	font-weight: normal;
+}
+
+nav ul
+{
+	list-style-type: none;
+	display: flex;
+}
+
+nav li
+{
+	margin-right: 15px;
+}
+
+nav a
+{
+	font-size: 1.3em;
+	padding-bottom: 3px;
+	text-decoration: none;
+}
+
+nav a:hover
+{
+	border-bottom: 3px solid #760001;
+}
+
+.titre
+{
+    color: blue;
+}
+
+#menu
+{
+	color: blue;
+}
+
+p
+{
+    word-wrap: break-word;
+}
+
+.presentation
+{
+    color: blue;
+    text-align: center;
+    background-position: to right;
+}
+
+.row
+{
+	.make-row();
+}
+
+#conteneur 
+{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	border: 1px solid black;
+	margin-right: 10px;
+	background: lightblue;
+}
+
+.element:nth-child(2)
+{
+    flex: 2;
+    width: 50%;
+    overflow: scroll;
+}
+.element:nth-child(1)
+{
+    flex: 1;
+    width: 25%;
+    overflow: scroll;
+}
+
+.element:nth-child(3)
+{
+    flex: 1;
+     width: 25%;
+     overflow: scroll;
+}
+
+div#centre {
+	width: 50%;
+	border: 1px solid black;
+	margin-left: 170px;
+	margin-right: 310px;
+	overflow: scroll;
+	background: khaki;
+}
+
+em{
+	font-style: italic;
+	font-weight: bold;
+}
+
+
