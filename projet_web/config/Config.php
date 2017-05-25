@@ -12,18 +12,6 @@ class Conf {
     'password' => 'root'
   );
 
-  /*données de connexion serveur*/
-  /*static private $databases = array(
-
-      'hostname' => 'db683312400.db.1and1.com',
-
-      'database' => 'db683312400',
-
-      'login' => 'dbo683312400',
-
-      'password' => '?Garabla58'
-  );*/
-
   static public function getLogin() {
     // getLogin : => char[]
     //resultat : chaîne de caractère qui correspond au login 
